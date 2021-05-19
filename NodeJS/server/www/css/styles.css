@@ -1,0 +1,89 @@
+body {
+  background-color: #ee7;
+  margin: 4em 0;
+  padding: 0;
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+}
+
+#container {
+  background-color: #fff;
+  width: 75vw;
+  height: 80vh;
+  margin: 0 auto;
+  padding: 2em;
+}
+
+h1 {
+  margin: 0 0 .3em 0;
+}
+
+input, select {
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+  height: 35px;
+  width: 250px;
+}
+
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+}
+
+.btn {
+  height: 33px;
+  line-height: 33px;
+  padding: 0 5px;
+  margin: 0 10px;
+  float:left;
+  color: #111;
+  background-color: #ddd;
+  border: 1px solid #444;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #eee;
+}
+.btn:active {
+  background-color: #ccc;
+}
+
+.left {
+  float:left;
+}
+
+.right {
+  float:right;
+}
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+  *zoom: 1;
+}

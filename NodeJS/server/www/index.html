@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head lang="en">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+</head>
+<body>
+  <div id="container" class="cf">
+    <div id="scr1">
+      <div class="cf">
+        <h1>Welcome</h1>
+        <p>
+          Add your name
+        </p>
+      </div>
+
+      <div class="cf">
+        <input id="fname" class="left" type="text" value="henk" /><div class="btn" id="fnameSubmit">submit</div><br/>
+  <!-- 
+        <p>
+          Devices:
+        </p>
+        <select id="mididevices_dropdown" class="left" name="midi devices">
+          <option value="henk1">henk 1</option>
+          <option value="henk2">henk 2</option>
+          <option value="henk3">henk 3</option>
+          <option value="henk4">henk 4</option>
+          <option value="henk5">henk 5</option>
+        </select>
+        <div class="btn left noselect" id="selectMidiDevice">submit</div>
+   -->
+      </div>
+    </div>
+    <div id="scr2">
+      <div class="cf">
+        <h1>Connected clients</h1>
+        <div class="connected_clients"></div>
+      </div>
+    </div>
+  </div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/jquery-3.4.1.min.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>
