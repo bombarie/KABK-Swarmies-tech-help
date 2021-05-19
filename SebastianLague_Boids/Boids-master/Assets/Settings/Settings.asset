@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6194ee95dedb4d71a8fe738abba0f47, type: 3}
   m_Name: Settings
   m_EditorClassIdentifier: 
-  minSpeed: 2
-  maxSpeed: 5
+  minSpeed: 3
+  maxSpeed: 6
   perceptionRadius: 3
   avoidanceRadius: 2
   maxSteerForce: 10
