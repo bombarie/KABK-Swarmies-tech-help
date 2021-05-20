@@ -3,12 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BoidsAddRemover : MonoBehaviour {
-    // Start is called before the first frame update
+
+
+    private static BoidsAddRemover _instance;
+    public static BoidsAddRemover instance {
+        get {
+            if (_instance == null) {
+                _instance = GameObject.FindObjectOfType<BoidsAddRemover>();
+            }
+
+            return _instance;
+        }
+    }
+
+    public enum Type {
+        TYPE_1,
+        TYPE_2,
+        TYPE_3
+    }
 
     public BoidManager boidManager;
     public Spawner spawner;
+
     void Start() {
-        //boidManager = GetComponent<BoidManager>();
     }
 
     Boid latestBoid = null;
@@ -32,27 +49,37 @@ public class BoidsAddRemover : MonoBehaviour {
 
         if (Input.GetKeyUp(KeyCode.Alpha1)) {
             Debug.Log("[type1] add boid");
-            Boid b = spawner.spawnBoid();
-            b.SetColour(Color.yellow);
-            b.setScale(1.5f);
-            boidManager.InitializeBoid(b);
-            latestBoid = b;
+            addBoidType(Type.TYPE_1);
         }
         if (Input.GetKeyUp(KeyCode.Alpha2)) {
             Debug.Log("[type2] add boid");
-            Boid b = spawner.spawnBoid();
-            b.SetColour(Color.red);
-            b.setScale(new Vector3(2f, .5f, 2f));
-            boidManager.InitializeBoid(b);
-            latestBoid = b;
+            addBoidType(Type.TYPE_2);
         }
         if (Input.GetKeyUp(KeyCode.Alpha3)) {
             Debug.Log("[type3] add boid");
-            Boid b = spawner.spawnBoid();
-            b.SetColour(Color.magenta);
-            b.setScale(3f);
-            boidManager.InitializeBoid(b);
-            latestBoid = b;
+            addBoidType(Type.TYPE_3);
         }
+    }
+
+    public void addBoidType(Type type) {
+        Boid b = spawner.spawnBoid();
+
+        switch (type) {
+            case Type.TYPE_1:
+                b.SetColour(Color.red);
+                b.setScale(new Vector3(2f, .5f, 2f));
+                break;
+            case Type.TYPE_2:
+                b.SetColour(Color.yellow);
+                b.setScale(1.5f);
+                break;
+            case Type.TYPE_3:
+                b.SetColour(Color.magenta);
+                b.setScale(3f);
+                break;
+        }
+
+        boidManager.InitializeBoid(b);
+        latestBoid = b;
     }
 }
