@@ -128,9 +128,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/tutorialSampleScene.unity
     guid: 618672466da1c384fba14c3860add1ad
-  - enabled: 1
-    path: Assets/Scenes/UX/SampleUXScene_boids_socket.unity
+  - enabled: 0
+    path: Assets/Scenes/UX/SampleUXScene v02 boids_socket.unity
     guid: 8359890a6d5449d4dbcdcc67761445ce
+  - enabled: 1
+    path: Assets/Scenes/UX/SampleUXScene v03 login screens.unity
+    guid: 777863025d9107f4da210346c8b0b958
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: f8ce26fe3bc69499b9be4b2378e97a94,
       type: 2}
