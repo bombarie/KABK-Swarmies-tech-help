@@ -17,6 +17,7 @@ public class BoidsAddRemover : MonoBehaviour {
     }
 
     public enum Type {
+        DEFAULT,
         TYPE_1,
         TYPE_2,
         TYPE_3
@@ -26,6 +27,8 @@ public class BoidsAddRemover : MonoBehaviour {
     public Spawner spawner;
 
     void Start() {
+
+      //for
     }
 
     Boid latestBoid = null;

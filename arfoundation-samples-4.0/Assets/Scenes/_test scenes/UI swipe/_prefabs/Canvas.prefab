@@ -137,7 +137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5294118, g: 0.67058825, b: 0.7764706, a: 0}
+  m_Color: {r: 0.5294118, g: 0.67058825, b: 0.7764706, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -168,6 +168,8 @@ MonoBehaviour:
   allowDragging: 0
   allowSwipePrevious: 1
   allowSwipeNext: 1
+  fadeSpeed: 1.35
+  targColor: {r: 0.5294118, g: 0.67058825, b: 0.7764706, a: 0}
 --- !u!1 &817115880
 GameObject:
   m_ObjectHideFlags: 0
@@ -993,6 +995,7 @@ GameObject:
   - component: {fileID: 7727324332521850198}
   - component: {fileID: 7727324332521850199}
   - component: {fileID: 1070132358}
+  - component: {fileID: 8817500728292045874}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1039,7 +1042,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &7727324332521850198
 MonoBehaviour:
@@ -1107,6 +1110,18 @@ MonoBehaviour:
   IsDragging: 0
   IsMovingTowardsTarget: 0
   screensParent: {fileID: 7727324333605947503}
+--- !u!114 &8817500728292045874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7727324332521850196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a837308d04868b045b443caf0d505278, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7727324332731162923
 GameObject:
   m_ObjectHideFlags: 0
@@ -1200,7 +1215,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   allowDragging: 0
   allowSwipePrevious: 1
-  allowSwipeNext: 1
+  allowSwipeNext: 0
   inputField: {fileID: 987537949}
 --- !u!1 &7727324332991997078
 GameObject:
@@ -2198,8 +2213,24 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-    eu fugiat nulla pariatur. '
+  m_Text: "Welcome to the Swarm. If you continue to use this service, you are agreeing
+    to comply with and be bound by the following terms and conditions of use. The
+    terms and conditions are required to enable core functionality of this app, such
+    as the application security, network management and accessibility.\n\nWe might
+    use your personal information:\nStore your information, such as the log in and
+    entered name\nOnly collect the information you choose to give to us; we only
+    require the minimum amount of personal information that is necessary to fulfil
+    the purpose of your interaction with the Swarm\nWe do not sell any (personal)
+    information to third parties. We provide the same standard of privacy protection
+    to all users.\nTo understand how you interact with our application, in order
+    to evaluate and improve the app\u2019s performance and provide a better experience\nYour
+    use of any information or materials on this Application is entirely at your own
+    risk, for which we shall not be liable.\nThis application contains material which
+    is owned by or licences to us. This material included, but is not limited to,
+    the design, layout, look, appearance and graphics. Reproduction is prohibited
+    other than in accordance with the copyright notice, which forms part of these
+    terms and conditions.\nTo \u201CAgree\u201D will mean accepting all essential
+    terms and conditions and make use of the Swarm.\nTo \u201Cdisagree\u201D will
+    mean to reject all non-essential terms and conditions; and hence your interaction
+    with the Swarm ends here. If you disagree with any part of these terms and conditions,
+    please do not use the Swarm application."
