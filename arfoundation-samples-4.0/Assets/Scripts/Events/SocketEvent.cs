@@ -2,6 +2,8 @@
 
     public enum EVENT_TYPE {
         CONNECTED,
+        DISCONNECTED,
+        CONNECTION_FAILED
     }
     public EVENT_TYPE evtType;
 

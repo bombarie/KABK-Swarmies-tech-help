@@ -131,9 +131,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/UX/SampleUXScene v02 boids_socket.unity
     guid: 8359890a6d5449d4dbcdcc67761445ce
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/UX/SampleUXScene v03 login screens.unity
     guid: 777863025d9107f4da210346c8b0b958
+  - enabled: 0
+    path: Assets/Scenes/_test scenes/UI swipe/ui swipe.unity
+    guid: e9f75486401ef6f45b4bde3306bae5c0
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: f8ce26fe3bc69499b9be4b2378e97a94,
       type: 2}

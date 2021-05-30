@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class SocketServerConnect : MonoBehaviour {
 
-    public InputField mainInputField;
+    public InputField IPAddressField;
     public Canvas canvas;
     public CanvasScaler canvasScaler;
     public float scaleDownSpeed = 2f;
@@ -15,10 +15,11 @@ public class SocketServerConnect : MonoBehaviour {
     void Start() {
 
         Events.instance.AddListener<SocketEvent>(socketEventHandler);
+
         string storedIP = PlayerPrefs.GetString("socketserverIP");
         if (storedIP != null || storedIP != "") {
-            if (mainInputField != null) {
-                mainInputField.text = storedIP;
+            if (IPAddressField != null) {
+                IPAddressField.text = storedIP;
             }
         }
     }
@@ -40,14 +41,19 @@ public class SocketServerConnect : MonoBehaviour {
     }
 
     public void connectHandler() {
-        SocketConnection.instance.connect(mainInputField.text);
+        SocketConnection.instance.connect(IPAddressField.text);
+        saveIPAddress();
+    }
+
+    private void saveIPAddress() {
+        if (IPAddressField != null) {
+            if (IPAddressField.text != "") {
+                PlayerPrefs.SetString("socketserverIP", IPAddressField.text);
+            }
+        }
     }
 
     private void OnDestroy() {
-        if (mainInputField != null) {
-            if (mainInputField.text != "") {
-                PlayerPrefs.SetString("socketserverIP", mainInputField.text);
-            }
-        }
+        saveIPAddress();
     }
 }

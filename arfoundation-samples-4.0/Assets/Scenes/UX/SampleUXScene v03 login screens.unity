@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.4964124, b: 0.574817, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -177,6 +177,83 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &845813882
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 100000, guid: e84b65f6b68cbca4a9a9c63e390ea836, type: 3}
+      propertyPath: m_Name
+      value: Advanced FPS Counter
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: e84b65f6b68cbca4a9a9c63e390ea836, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: e84b65f6b68cbca4a9a9c63e390ea836, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: e84b65f6b68cbca4a9a9c63e390ea836, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: e84b65f6b68cbca4a9a9c63e390ea836, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: e84b65f6b68cbca4a9a9c63e390ea836, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: e84b65f6b68cbca4a9a9c63e390ea836, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: e84b65f6b68cbca4a9a9c63e390ea836, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: e84b65f6b68cbca4a9a9c63e390ea836, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: e84b65f6b68cbca4a9a9c63e390ea836, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: e84b65f6b68cbca4a9a9c63e390ea836, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: e84b65f6b68cbca4a9a9c63e390ea836, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e84b65f6b68cbca4a9a9c63e390ea836, type: 3}
+      propertyPath: scaleFactor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e84b65f6b68cbca4a9a9c63e390ea836, type: 3}
+      propertyPath: circleGesture
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e84b65f6b68cbca4a9a9c63e390ea836, type: 3}
+      propertyPath: fpsCounter.anchor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e84b65f6b68cbca4a9a9c63e390ea836, type: 3}
+      propertyPath: memoryCounter.anchor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: e84b65f6b68cbca4a9a9c63e390ea836, type: 3}
+      propertyPath: deviceInfoCounter.anchor
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e84b65f6b68cbca4a9a9c63e390ea836, type: 3}
 --- !u!1 &1015722065
 GameObject:
   m_ObjectHideFlags: 0
@@ -476,31 +553,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Welcome screens
       objectReference: {fileID: 0}
-    - target: {fileID: 7727324332995973682, guid: 1ddd2674f262538438c9bbaab062ac23,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -526
-      objectReference: {fileID: 0}
-    - target: {fileID: 7727324333026671353, guid: 1ddd2674f262538438c9bbaab062ac23,
-        type: 3}
-      propertyPath: m_Text
-      value: "The Swarm is an interactive sculpture that can be experienced through
-        both physical and augmented reality.\n\nUsing the natural phenomenon of schooling
-        in comparison to a network of data, we highlight the non-perishing nature
-        of data, which is left behind on the boulevard of Scheveningen by the visitors.
-        We want to critique data security and take the \u201CMan in the middle\u201D
-        technique as an example."
-      objectReference: {fileID: 0}
-    - target: {fileID: 7727324333026671358, guid: 1ddd2674f262538438c9bbaab062ac23,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 1297.345
-      objectReference: {fileID: 0}
-    - target: {fileID: 7727324333026671358, guid: 1ddd2674f262538438c9bbaab062ac23,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 382
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ddd2674f262538438c9bbaab062ac23, type: 3}
 --- !u!1 &2146458540
@@ -657,6 +709,11 @@ PrefabInstance:
       objectReference: {fileID: 1131787803}
     - target: {fileID: 3589813686258533987, guid: 16e8c008a5177354f92439f80d3f774f,
         type: 3}
+      propertyPath: IPAddressField
+      value: 
+      objectReference: {fileID: 3589813687493161986}
+    - target: {fileID: 3589813686258533987, guid: 16e8c008a5177354f92439f80d3f774f,
+        type: 3}
       propertyPath: scaleDownSpeed
       value: 3.5
       objectReference: {fileID: 0}
@@ -770,5 +827,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7215462539705609546, guid: 16e8c008a5177354f92439f80d3f774f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16e8c008a5177354f92439f80d3f774f, type: 3}
+--- !u!114 &3589813687493161986 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3589813685720870967, guid: 16e8c008a5177354f92439f80d3f774f,
+    type: 3}
+  m_PrefabInstance: {fileID: 3589813687493161985}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d199490a83bb2b844b9695cbf13b01ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
