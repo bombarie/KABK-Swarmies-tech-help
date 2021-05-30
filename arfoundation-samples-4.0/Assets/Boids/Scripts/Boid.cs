@@ -97,16 +97,7 @@ public class Boid : MonoBehaviour {
         forward = dir;
     }
 
-   BoidsAddRemover.Type boidType = BoidsAddRemover.Type.DEFAULT;
-   public void setType(BoidsAddRemover.Type type) {
-      boidType = type;
-
-      switch (boidType) {
-         //case 
-      }
-   }
-
-   bool IsHeadingForCollision () {
+    bool IsHeadingForCollision () {
         RaycastHit hit;
         if (Physics.SphereCast (position, settings.boundsRadius, forward, out hit, settings.collisionAvoidDst, settings.obstacleMask)) {
             return true;

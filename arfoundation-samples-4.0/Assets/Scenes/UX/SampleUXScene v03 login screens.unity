@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.4964124, b: 0.574817, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -175,7 +175,50 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &881269182
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 881269184}
+  - component: {fileID: 881269183}
+  m_Layer: 0
+  m_Name: NameSubmit catcher
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &881269183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 881269182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a837308d04868b045b443caf0d505278, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &881269184
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 881269182}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1015722065
 GameObject:
@@ -366,6 +409,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 773817526, guid: 1ddd2674f262538438c9bbaab062ac23, type: 3}
+      propertyPath: fadeSpeed
+      value: 1.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 773817526, guid: 1ddd2674f262538438c9bbaab062ac23, type: 3}
+      propertyPath: targColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 773817526, guid: 1ddd2674f262538438c9bbaab062ac23, type: 3}
+      propertyPath: targColor.b
+      value: 0.7764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 773817526, guid: 1ddd2674f262538438c9bbaab062ac23, type: 3}
+      propertyPath: targColor.g
+      value: 0.67058825
+      objectReference: {fileID: 0}
+    - target: {fileID: 773817526, guid: 1ddd2674f262538438c9bbaab062ac23, type: 3}
+      propertyPath: targColor.r
+      value: 0.5294118
+      objectReference: {fileID: 0}
+    - target: {fileID: 773817527, guid: 1ddd2674f262538438c9bbaab062ac23, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7727324332521850192, guid: 1ddd2674f262538438c9bbaab062ac23,
         type: 3}
       propertyPath: m_Pivot.x
@@ -471,35 +538,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7727324332521850193, guid: 1ddd2674f262538438c9bbaab062ac23,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7727324332521850196, guid: 1ddd2674f262538438c9bbaab062ac23,
         type: 3}
       propertyPath: m_Name
       value: Welcome screens
       objectReference: {fileID: 0}
-    - target: {fileID: 7727324332995973682, guid: 1ddd2674f262538438c9bbaab062ac23,
+    - target: {fileID: 7727324332731162839, guid: 1ddd2674f262538438c9bbaab062ac23,
         type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -526
-      objectReference: {fileID: 0}
-    - target: {fileID: 7727324333026671353, guid: 1ddd2674f262538438c9bbaab062ac23,
-        type: 3}
-      propertyPath: m_Text
-      value: "The Swarm is an interactive sculpture that can be experienced through
-        both physical and augmented reality.\n\nUsing the natural phenomenon of schooling
-        in comparison to a network of data, we highlight the non-perishing nature
-        of data, which is left behind on the boulevard of Scheveningen by the visitors.
-        We want to critique data security and take the \u201CMan in the middle\u201D
-        technique as an example."
-      objectReference: {fileID: 0}
-    - target: {fileID: 7727324333026671358, guid: 1ddd2674f262538438c9bbaab062ac23,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 1297.345
-      objectReference: {fileID: 0}
-    - target: {fileID: 7727324333026671358, guid: 1ddd2674f262538438c9bbaab062ac23,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 382
+      propertyPath: allowSwipeNext
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ddd2674f262538438c9bbaab062ac23, type: 3}
@@ -584,7 +636,7 @@ PrefabInstance:
     - target: {fileID: 2677586289392183899, guid: cefaa5858471fb64ab9aadc0b7b6862e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2677586289392183899, guid: cefaa5858471fb64ab9aadc0b7b6862e,
         type: 3}
