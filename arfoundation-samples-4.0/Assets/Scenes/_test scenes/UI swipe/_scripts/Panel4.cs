@@ -29,6 +29,10 @@ public class Panel4 : PanelBase, IPanelBehavior {
         // TODO -> do due diligence on the name! No illegal characters! :)
 
         Events.instance.Raise(new NameSubmitEvent(NameSubmitEvent.EVENT_TYPE.SUBMIT_NAME, inputField.text));
+
+        // fuckit, continue without server confirmation
+        DragUI.instance.nextPanel();
+
     }
 
     private void nameSubmitHandler(NameSubmitEvent e) {

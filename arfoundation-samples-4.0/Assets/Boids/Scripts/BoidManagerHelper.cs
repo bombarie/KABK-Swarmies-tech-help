@@ -22,6 +22,11 @@ public class BoidManagerHelper : MonoBehaviour {
         TYPE_3
     }
 
+    public enum SwarmBehavior {
+        CONTRACT_TO_TARGET,
+        RELEASE_FROM_TARGET
+    }
+
     public BoidManager boidManager;
     public Spawner spawner;
     public Transform boidsTarget;
@@ -29,12 +34,17 @@ public class BoidManagerHelper : MonoBehaviour {
     public BoidSettings boidSettingsTight;
     public BoidSettings boidSettingsLoose;
 
+    public bool enableTouchInput = true;
+
+    private Boid latestBoid = null;
+    public float boidSettingsScaleMultiplier = 1f;
+
     void Start() {
         Events.instance.AddListener<SwarmEvent>(swarmEventHandler);
 
         Vector3 parentScale = transform.parent.localScale;
-        boidSettingsTight.scaleMultiplier = parentScale.x * 2f;
-        boidSettingsLoose.scaleMultiplier = parentScale.x * 2f;
+        boidSettingsTight.scaleMultiplier = parentScale.x * boidSettingsScaleMultiplier;
+        boidSettingsLoose.scaleMultiplier = parentScale.x * boidSettingsScaleMultiplier;
 
         boidManager.settings = boidSettingsLoose;
     }
@@ -42,18 +52,36 @@ public class BoidManagerHelper : MonoBehaviour {
     private void swarmEventHandler(SwarmEvent e) {
         Debug.Log("BoidsAddRemover >> f:swarmEventHandler >> e: " + e.ToString());
         if (e.evtType == SwarmEvent.EVENT_TYPE.ADD_BOIDS) {
-            for (int i = 0; i < e.amount; i++) {
-                Boid b = spawner.spawnBoid();
-                boidManager.InitializeBoid(b);
-            }
+            addBoids(e.amount);
         }
     }
 
-    Boid latestBoid = null;
-    void Update() {
-        handleKeyboardInput();
+    private void addBoids(int num) {
+        for (int i = 0; i < num; i++) {
+            Boid b = spawner.spawnBoid();
+            boidManager.InitializeBoid(b);
+        }
+    }
 
-        //handleTouches();
+    void Update() {
+        // handleKeyboardInput();
+
+        if (enableTouchInput) {
+            handleTouches();
+        }
+    }
+
+    public void setSwarmBehavior(SwarmBehavior behavior) {
+        switch (behavior) {
+            case SwarmBehavior.CONTRACT_TO_TARGET:
+                BoidManagerHelper.instance.boidManager.setTarget(boidsTarget);
+                BoidManagerHelper.instance.boidManager.setSettings(BoidManagerHelper.instance.boidSettingsTight);
+                break;
+            case SwarmBehavior.RELEASE_FROM_TARGET:
+                BoidManagerHelper.instance.boidManager.setTarget(null);
+                BoidManagerHelper.instance.boidManager.setSettings(BoidManagerHelper.instance.boidSettingsLoose);
+                break;
+        }
     }
 
     private void handleKeyboardInput() {
@@ -89,7 +117,7 @@ public class BoidManagerHelper : MonoBehaviour {
     }
 
     private void handleTouches() {
-        handleMouse(); // debug
+        //handleMouse(); // debug
 
         if (Input.touchCount > 0) {
             Touch touch = Input.GetTouch(0);
@@ -106,10 +134,9 @@ public class BoidManagerHelper : MonoBehaviour {
                         Debug.Log("I hit a hotspotcreate wall!");
 
                         //boidManager.settings = boidSettingsTight;
-                        Vector3 v = hit.point - (Random.Range(0.12f, .22f) * hit.normal);
+                        Vector3 v = hit.point - (Random.Range(0.5f, .7f) * hit.normal);
                         boidsTarget.position = v;
-                        BoidManagerHelper.instance.boidManager.setTarget(boidsTarget);
-                        BoidManagerHelper.instance.boidManager.setSettings(BoidManagerHelper.instance.boidSettingsTight);
+                        setSwarmBehavior(SwarmBehavior.CONTRACT_TO_TARGET);
                         ////Transform t = Instantiate(hotspot1Prefab, v, hit.transform.rotation);
                         //Transform t = Instantiate(UIHotspotSelector.instance.getSelectedHotspotType(), v, hit.transform.rotation);
                     }
@@ -141,8 +168,7 @@ public class BoidManagerHelper : MonoBehaviour {
                         ////Transform t = Instantiate(hotspot1Prefab, v, hit.transform.rotation);
                         //Transform t = Instantiate(UIHotspotSelector.instance.getSelectedHotspotType(), v, hit.transform.rotation);
 
-                        BoidManagerHelper.instance.boidManager.setTarget(null);
-                        BoidManagerHelper.instance.boidManager.setSettings(BoidManagerHelper.instance.boidSettingsLoose);
+                        setSwarmBehavior(SwarmBehavior.RELEASE_FROM_TARGET);
                     }
                     break;
             }
@@ -160,10 +186,9 @@ public class BoidManagerHelper : MonoBehaviour {
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask)) {
                 Debug.Log("BoidManagerHelper >> settings 'boidSettingsTight'");
                 //boidManager.setSettings(boidSettingsTight);
-                Vector3 v = hit.point - (Random.Range(0.25f, 0.5f) * hit.normal);
+                Vector3 v = hit.point - (Random.Range(0.5f, 0.7f) * hit.normal);
                 boidsTarget.position = v;
-                BoidManagerHelper.instance.boidManager.setTarget(boidsTarget);
-                BoidManagerHelper.instance.boidManager.setSettings(BoidManagerHelper.instance.boidSettingsTight);
+                setSwarmBehavior(SwarmBehavior.CONTRACT_TO_TARGET);
             }
         }
         if (Input.GetMouseButtonUp(0)) {
@@ -172,12 +197,11 @@ public class BoidManagerHelper : MonoBehaviour {
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask)) {
                 Debug.Log("BoidManagerHelper >> settings 'boidSettingsLoose'");
                 //boidManager.setSettings(boidSettingsLoose);
-                Vector3 v = hit.point - (Random.Range(0.12f, 0.22f) * hit.normal);
+                //Vector3 v = hit.point - (Random.Range(0.12f, 0.22f) * hit.normal);
 
                 //Boid b = spawner.spawnBoid(v);
                 //boidManager.InitializeBoid(b);
-                BoidManagerHelper.instance.boidManager.setTarget(null);
-                BoidManagerHelper.instance.boidManager.setSettings(BoidManagerHelper.instance.boidSettingsLoose);
+                setSwarmBehavior(SwarmBehavior.RELEASE_FROM_TARGET);
             }
         }
 

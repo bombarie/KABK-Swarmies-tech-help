@@ -25,5 +25,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 24576
   boundsRadius: 0.1
-  avoidCollisionWeight: 20
-  collisionAvoidDst: 0.5
+  avoidCollisionWeight: 15
+  collisionAvoidDst: 0.2
+  scaleMultiplier: 1

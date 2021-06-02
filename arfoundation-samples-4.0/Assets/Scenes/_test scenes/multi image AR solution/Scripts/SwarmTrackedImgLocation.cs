@@ -11,6 +11,9 @@ public class SwarmTrackedImgLocation : MonoBehaviour {
     private Material targetIndicatorMat;
     public float updateThreshold = .01f;
 
+    public bool showGUIDebugData = true;
+    public bool sendMovedUpdates = true;
+
     private Vector3 prevPos;
     void Start() {
         //randomColor();
@@ -19,7 +22,9 @@ public class SwarmTrackedImgLocation : MonoBehaviour {
 
     void Update() {
         if (Vector3.Distance(prevPos, transform.position) > updateThreshold) {
-            Events.instance.Raise(new SwarmEvent(SwarmEvent.EVENT_TYPE.SET_POSITION, targetIndicator.position));
+            if (sendMovedUpdates) {
+                Events.instance.Raise(new SwarmEvent(SwarmEvent.EVENT_TYPE.SET_POSITION, targetIndicator.position));
+            }
             randomColor();
             prevPos = transform.position;
         }
@@ -49,6 +54,8 @@ public class SwarmTrackedImgLocation : MonoBehaviour {
     }
 
     private void OnGUI() {
+        if (!showGUIDebugData) return;
+
         //Vector2 nativeSize = new Vector2(640, 480);
         //GUIStyle style = new GUIStyle();
         //style.fontSize = (int)(20.0f * ((float)Screen.width / (float)nativeSize.x));
@@ -58,6 +65,7 @@ public class SwarmTrackedImgLocation : MonoBehaviour {
         GUILayout.BeginArea(new Rect(10, 10, Screen.width - 20, 500));
         GUILayout.BeginVertical();
         GUILayout.Label(name + " >> position: " + transform.position);
+        GUILayout.Label(name + " >> scale: " + transform.localScale);
         GUILayout.EndVertical();
         GUILayout.EndArea();
     }

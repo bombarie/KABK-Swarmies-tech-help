@@ -189,7 +189,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 4200, y: -1000}
+  m_AnchoredPosition: {x: 5400, y: -1000}
   m_SizeDelta: {x: 1200, y: 2000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &773817528
@@ -244,7 +244,7 @@ MonoBehaviour:
   allowDragging: 0
   allowSwipePrevious: 1
   allowSwipeNext: 1
-  fadeSpeed: 2
+  fadeSpeed: 0.75
   targColor: {r: 0.5294118, g: 0.67058825, b: 0.7764706, a: 0}
   logo: {fileID: 385285619}
   logoTargcolor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 0}
@@ -1155,7 +1155,7 @@ GameObject:
   - component: {fileID: 1070132358}
   - component: {fileID: 8817500728292045874}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: MenuUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1258,11 +1258,12 @@ MonoBehaviour:
   panelH: 2000
   snapSpeed: 9
   changePanelSwipeThreshold: 0.3
-  nextPanelLoadedDistanceThreshold: 0.05
+  nextPanelLoadedDistanceThreshold: 10
   panels:
   - {fileID: 7727324333480857660}
   - {fileID: 7727324333978677015}
   - {fileID: 7727324333155900424}
+  - {fileID: 7727324332731162922}
   - {fileID: 773817525}
   selectedPanel: 0
   IsDragging: 0
@@ -1298,7 +1299,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7727324332731162922
 RectTransform:
   m_ObjectHideFlags: 0

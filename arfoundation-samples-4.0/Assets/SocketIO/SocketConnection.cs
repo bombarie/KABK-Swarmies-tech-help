@@ -140,7 +140,10 @@ public class SocketConnection : MonoBehaviour {
     public void registerName(string name) {
         Debug.Log("SocketConnection >> f:registerName >> registering name '" + name + "'");
 
-        socket.Emit("fname", name);
+        if (IsConnected) {
+            socket.Emit("fname", name);
+        }
+
     }
 
     private void OnDestroy() {

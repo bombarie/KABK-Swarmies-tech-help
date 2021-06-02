@@ -26,9 +26,15 @@ public class Panel5 : PanelBase, IPanelBehavior {
     }
     void Update() {
         if (IsPrepared) {
-            img.color = Color.Lerp(img.color, targColor, fadeSpeed * Time.deltaTime);
-            title.color = Color.Lerp(title.color, titleTargColor, fadeSpeed * Time.deltaTime);
-            logo.color = Color.Lerp(logo.color, logoTargcolor, fadeSpeed * Time.deltaTime);
+            // linear
+            img.color = new Color(img.color.r, img.color.g, img.color.b, img.color.a - (fadeSpeed * Time.deltaTime));
+            title.color = new Color(title.color.r, title.color.g, title.color.b, title.color.a - (fadeSpeed * Time.deltaTime));
+            logo.color = new Color(logo.color.r, logo.color.g, logo.color.b, logo.color.a - (fadeSpeed * Time.deltaTime));
+
+            // lerp
+            //img.color = Color.Lerp(img.color, targColor, fadeSpeed * Time.deltaTime);
+            //title.color = Color.Lerp(title.color, titleTargColor, fadeSpeed * Time.deltaTime);
+            //logo.color = Color.Lerp(logo.color, logoTargcolor, fadeSpeed * Time.deltaTime);
 
             if (img.color.a < 0.05f) {
                 Events.instance.Raise(new GlobalEvent(GlobalEvent.EVENT_TYPE.MENU_COMPLETED));

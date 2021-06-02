@@ -17,26 +17,40 @@ public class BoidSceneManager : MonoBehaviour {
     public Transform boidScene;
     public Transform target;
 
-    private bool firstTime = true;
-
     [Space(10)]
-    public int initialBoidsAmount = 35;
+    private bool firstTime = true;
+    public bool autoSpawnAtStart = true;
+    public bool movesToNewPositions = true;
+    public bool showDebugInfo = false;
+
 
     void Start() {
         Events.instance.AddListener<SwarmEvent>(swarmEventHandler);
+        if (autoSpawnAtStart) {
+            for (int i = 0; i < BoidManagerHelper.instance.spawner.spawnCount; i++) {
+                Boid b = BoidManagerHelper.instance.spawner.spawnBoid();
+                BoidManagerHelper.instance.boidManager.InitializeBoid(b);
+            }
+
+            BoidManagerHelper.instance.setSwarmBehavior(BoidManagerHelper.SwarmBehavior.RELEASE_FROM_TARGET);
+        }
     }
 
     private void swarmEventHandler(SwarmEvent e) {
         Debug.Log("BoidSceneManager >> f:swarmEventHandler >> e: " + e.ToString());
 
         if (e.evtType == SwarmEvent.EVENT_TYPE.SET_POSITION) {
-            target.position = e.position;
+            if (movesToNewPositions) {
+                target.position = e.position;
 
-            // move immediately the first time;
-            if (firstTime) {
-                Events.instance.Raise(new SwarmEvent(SwarmEvent.EVENT_TYPE.ADD_BOIDS, initialBoidsAmount));
-                boidScene.position = e.position;
-                firstTime = false;
+                // move immediately the first time;
+                if (firstTime) {
+                    if (BoidManagerHelper.instance.boidManager.boidCount() == 0) {
+                        Events.instance.Raise(new SwarmEvent(SwarmEvent.EVENT_TYPE.ADD_BOIDS, BoidManagerHelper.instance.spawner.spawnCount));
+                    }
+                    boidScene.position = e.position;
+                    firstTime = false;
+                }
             }
         }
     }
@@ -59,5 +73,14 @@ public class BoidSceneManager : MonoBehaviour {
                 boidScene.Translate(p * lerpSpeed * Time.deltaTime);
                 break;
         }
+    }
+
+    void OnGUI() {
+        if (showDebugInfo) {
+            GUILayout.BeginVertical();
+            GUILayout.Label("BoidSceneManager position: " + transform.position);
+            GUILayout.EndVertical();
+        }
+
     }
 }

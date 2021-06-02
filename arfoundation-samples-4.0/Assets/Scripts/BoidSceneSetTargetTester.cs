@@ -10,11 +10,6 @@ public class BoidSceneSetTargetTester : MonoBehaviour {
     public Transform boidsTarget;
 
     void Start() {
-        Application.targetFrameRate = 30;
-    }
-
-    void Update() {
-
     }
 
     void OnGUI() {
@@ -24,7 +19,10 @@ public class BoidSceneSetTargetTester : MonoBehaviour {
             Events.instance.Raise(new SwarmEvent(SwarmEvent.EVENT_TYPE.SET_POSITION, Random.insideUnitSphere * 1f));
 
             if (firstTime) {
-                //Events.instance.Raise(new SwarmEvent(SwarmEvent.EVENT_TYPE.ADD_BOIDS, 30));
+                // if the release of Boids was already done elsewhere we shouldn't add more
+                if (BoidManagerHelper.instance.boidManager.boidCount() == 0) {
+                    Events.instance.Raise(new SwarmEvent(SwarmEvent.EVENT_TYPE.ADD_BOIDS, BoidManagerHelper.instance.spawner.spawnCount));
+                }
                 firstTime = false;
             }
         }
@@ -37,12 +35,10 @@ public class BoidSceneSetTargetTester : MonoBehaviour {
         }
         GUILayout.Space(10);
         if (GUILayout.Button("set target")) {
-            BoidManagerHelper.instance.boidManager.setTarget(boidsTarget);
-            BoidManagerHelper.instance.boidManager.setSettings(BoidManagerHelper.instance.boidSettingsTight);
+            BoidManagerHelper.instance.setSwarmBehavior(BoidManagerHelper.SwarmBehavior.CONTRACT_TO_TARGET);
         }
         if (GUILayout.Button("remove target")) {
-            BoidManagerHelper.instance.boidManager.setTarget(null);
-            BoidManagerHelper.instance.boidManager.setSettings(BoidManagerHelper.instance.boidSettingsLoose);
+            BoidManagerHelper.instance.setSwarmBehavior(BoidManagerHelper.SwarmBehavior.RELEASE_FROM_TARGET);
         }
 
         GUILayout.EndVertical();

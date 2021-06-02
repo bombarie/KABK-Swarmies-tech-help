@@ -19,19 +19,19 @@ MonoBehaviour:
       m_GuidLow: 5400488711551014259
       m_GuidHigh: 8769260916218627978
     m_SerializedTextureGuid:
-      m_GuidLow: 7233286988487088754
-      m_GuidHigh: 5513614850560609497
-    m_Size: {x: 2, y: 2}
+      m_GuidLow: 1474061975319869797
+      m_GuidHigh: 16193696551018420953
+    m_Size: {x: 4, y: 2.6666667}
     m_SpecifySize: 1
-    m_Name: fish2
-    m_Texture: {fileID: 2800000, guid: 433a5a72cc316461d9ccfb837e4b844c, type: 3}
+    m_Name: puppy
+    m_Texture: {fileID: 2800000, guid: 7fd9f965eb8e1474d9daeb1b3791bbe0, type: 3}
   - m_SerializedGuid:
       m_GuidLow: 5281383737691488429
       m_GuidHigh: 8095796551274288804
     m_SerializedTextureGuid:
       m_GuidLow: 8365349796444046296
       m_GuidHigh: 15759120733708380154
-    m_Size: {x: 2, y: 1.125}
+    m_Size: {x: 5, y: 2.8125}
     m_SpecifySize: 1
-    m_Name: fish3
+    m_Name: swarmies_logo_long
     m_Texture: {fileID: 2800000, guid: 7eef03d8b1517417fa672ed9cfa4b3da, type: 3}

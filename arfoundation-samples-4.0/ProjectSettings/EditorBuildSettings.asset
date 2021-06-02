@@ -143,9 +143,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Boids/Scenes/Obstacles_v04 reposition BoidScene.unity
     guid: 1962d23e2fc88304badc75b9868ab71c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/_test scenes/multi image AR solution/multiImgARSolution_v02.unity
     guid: 9fe675bcdcf424d969684a8fc0940685
+  - enabled: 1
+    path: Assets/Scenes/_test scenes/multi image AR solution/multiImgARSolution_v03_withMenu.unity
+    guid: cc3045bf7c5dda5408376b59dcd083fa
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: f8ce26fe3bc69499b9be4b2378e97a94,
       type: 2}

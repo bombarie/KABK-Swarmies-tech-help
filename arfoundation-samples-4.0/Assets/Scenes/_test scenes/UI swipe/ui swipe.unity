@@ -1077,30 +1077,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 773817526, guid: 1ddd2674f262538438c9bbaab062ac23, type: 3}
-      propertyPath: fadeSpeed
-      value: 1.35
-      objectReference: {fileID: 0}
-    - target: {fileID: 773817526, guid: 1ddd2674f262538438c9bbaab062ac23, type: 3}
-      propertyPath: targColor.a
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 773817526, guid: 1ddd2674f262538438c9bbaab062ac23, type: 3}
-      propertyPath: targColor.b
-      value: 0.7764706
-      objectReference: {fileID: 0}
-    - target: {fileID: 773817526, guid: 1ddd2674f262538438c9bbaab062ac23, type: 3}
-      propertyPath: targColor.g
-      value: 0.67058825
-      objectReference: {fileID: 0}
-    - target: {fileID: 773817526, guid: 1ddd2674f262538438c9bbaab062ac23, type: 3}
-      propertyPath: targColor.r
-      value: 0.5294118
-      objectReference: {fileID: 0}
-    - target: {fileID: 773817527, guid: 1ddd2674f262538438c9bbaab062ac23, type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7727324332521850192, guid: 1ddd2674f262538438c9bbaab062ac23,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1210,11 +1186,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Welcome screens
-      objectReference: {fileID: 0}
-    - target: {fileID: 7727324332731162839, guid: 1ddd2674f262538438c9bbaab062ac23,
-        type: 3}
-      propertyPath: allowSwipeNext
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ddd2674f262538438c9bbaab062ac23, type: 3}

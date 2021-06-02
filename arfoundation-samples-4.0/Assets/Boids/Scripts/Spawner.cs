@@ -12,10 +12,10 @@ public class Spawner : MonoBehaviour {
     public Color colour;
     public GizmoType showSpawnRegion;
 
-    void Awake () {
-        for (int i = 0; i < spawnCount; i++) {
-            spawnBoid();
-        }
+    void Awake() {
+        //for (int i = 0; i < spawnCount; i++) {
+        //    spawnBoid();
+        //}
     }
 
     public Boid spawnBoid() {
@@ -35,22 +35,22 @@ public class Spawner : MonoBehaviour {
         return boid;
     }
 
-    private void OnDrawGizmos () {
+    private void OnDrawGizmos() {
         if (showSpawnRegion == GizmoType.Always) {
-            DrawGizmos ();
+            DrawGizmos();
         }
     }
 
-    void OnDrawGizmosSelected () {
+    void OnDrawGizmosSelected() {
         if (showSpawnRegion == GizmoType.SelectedOnly) {
-            DrawGizmos ();
+            DrawGizmos();
         }
     }
 
-    void DrawGizmos () {
+    void DrawGizmos() {
 
-        Gizmos.color = new Color (colour.r, colour.g, colour.b, 0.3f);
-        Gizmos.DrawSphere (transform.position, spawnRadius);
+        Gizmos.color = new Color(colour.r, colour.g, colour.b, 0.3f);
+        Gizmos.DrawSphere(transform.position, spawnRadius);
     }
 
 }
