@@ -53,7 +53,7 @@ public class BoidManagerHelper : MonoBehaviour {
     void Update() {
         handleKeyboardInput();
 
-        handleTouches();
+        //handleTouches();
     }
 
     private void handleKeyboardInput() {

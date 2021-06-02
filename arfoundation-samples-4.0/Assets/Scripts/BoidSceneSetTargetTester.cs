@@ -13,7 +13,6 @@ public class BoidSceneSetTargetTester : MonoBehaviour {
         Application.targetFrameRate = 30;
     }
 
-    // Update is called once per frame
     void Update() {
 
     }

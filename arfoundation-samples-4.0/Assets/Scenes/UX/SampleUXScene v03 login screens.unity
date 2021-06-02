@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.4964124, b: 0.574817, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -121,6 +121,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!224 &9620678 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7727324332731162922, guid: 1ddd2674f262538438c9bbaab062ac23,
+    type: 3}
+  m_PrefabInstance: {fileID: 1767389378}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &282840816 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 492049301006846362, guid: cefaa5858471fb64ab9aadc0b7b6862e,
@@ -378,6 +384,12 @@ Canvas:
     type: 3}
   m_PrefabInstance: {fileID: 3589813687493161985}
   m_PrefabAsset: {fileID: 0}
+--- !u!224 &1231233155 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 773817525, guid: 1ddd2674f262538438c9bbaab062ac23,
+    type: 3}
+  m_PrefabInstance: {fileID: 1767389378}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1251263446 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3589813686466298396, guid: 16e8c008a5177354f92439f80d3f774f,
@@ -450,6 +462,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 773817525, guid: 1ddd2674f262538438c9bbaab062ac23, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 5403
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070132358, guid: 1ddd2674f262538438c9bbaab062ac23, type: 3}
+      propertyPath: panels.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1070132358, guid: 1ddd2674f262538438c9bbaab062ac23, type: 3}
+      propertyPath: panels.Array.data[3]
+      value: 
+      objectReference: {fileID: 9620678}
+    - target: {fileID: 1070132358, guid: 1ddd2674f262538438c9bbaab062ac23, type: 3}
+      propertyPath: panels.Array.data[4]
+      value: 
+      objectReference: {fileID: 1231233155}
     - target: {fileID: 7727324332521850192, guid: 1ddd2674f262538438c9bbaab062ac23,
         type: 3}
       propertyPath: m_Pivot.x
@@ -559,6 +587,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Welcome screens
+      objectReference: {fileID: 0}
+    - target: {fileID: 7727324332731162923, guid: 1ddd2674f262538438c9bbaab062ac23,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7727324332995973682, guid: 1ddd2674f262538438c9bbaab062ac23,
         type: 3}
