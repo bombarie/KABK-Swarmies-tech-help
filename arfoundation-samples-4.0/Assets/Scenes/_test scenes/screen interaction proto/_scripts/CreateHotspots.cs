@@ -19,6 +19,40 @@ public class CreateHotspots : MonoBehaviour {
         screenWidth = (float)Screen.width / 2.0f;
         screenHeight = (float)Screen.height / 2.0f;
 
+        // also do mouse click?
+        if (Input.GetMouseButtonUp(0)) {
+            RaycastHit hit;
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            int layerMask;
+
+            layerMask = 1 << 11; // layer 11 is the hotspot layer
+
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask)) {
+                Debug.Log("we hit a Hotspot!");
+                GameObject.Destroy(hit.transform.gameObject);
+                return;
+            }
+
+            layerMask = 1 << 10; // layer 10 is the hotspotCreate layer
+
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask)) {
+                Debug.Log("I hit a hotspotcreate wall!");
+
+                Vector3 v = hit.point - (Random.Range(0.15f, 0.85f) * hit.normal);
+                //Transform t = Instantiate(hotspot1Prefab, v, hit.transform.rotation);
+                Transform t = Instantiate(UIHotspotSelector.instance.getSelectedHotspotType(), v, hit.transform.rotation);
+            }
+
+            //if (Physics.Raycast(ray, out hit)) {
+            //    Transform objectHit = hit.transform;
+            //    MeshRenderer r = objectHit.GetComponent<MeshRenderer>();
+            //    if (r != null) {
+            //        r.material.color = Random.ColorHSV(0f, 1f, 1f, 1f, 1f, 1f);
+            //    }
+            //}
+        }
+
+
         if (Input.touchCount > 0) {
             Touch touch = Input.GetTouch(0);
 

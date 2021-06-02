@@ -76,13 +76,13 @@ GameObject:
   - component: {fileID: 42987732962396646}
   - component: {fileID: 2331693219356181441}
   - component: {fileID: 6159939747360096416}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: floor (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2761209923627848632
 Transform:
   m_ObjectHideFlags: 0
@@ -225,7 +225,7 @@ GameObject:
   - component: {fileID: 6339199359077490244}
   - component: {fileID: 6339199359077490247}
   - component: {fileID: 6339199359077490246}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -318,7 +318,7 @@ GameObject:
   - component: {fileID: 6339199359097891172}
   - component: {fileID: 6339199359097891175}
   - component: {fileID: 6339199359097891174}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -411,7 +411,7 @@ GameObject:
   - component: {fileID: 6339199359234951788}
   - component: {fileID: 6339199359234951791}
   - component: {fileID: 6339199359234951790}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -504,13 +504,13 @@ GameObject:
   - component: {fileID: 6339199359357577635}
   - component: {fileID: 6339199359357577634}
   - component: {fileID: 6339199359357577637}
-  m_Layer: 10
+  m_Layer: 14
   m_Name: Cube (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6339199359357577632
 Transform:
   m_ObjectHideFlags: 0
@@ -540,7 +540,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6339199359357577636}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -597,13 +597,13 @@ GameObject:
   - component: {fileID: 6339199359545046450}
   - component: {fileID: 6339199359545046453}
   - component: {fileID: 6339199359545046452}
-  m_Layer: 10
+  m_Layer: 14
   m_Name: Cube (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6339199359545046451
 Transform:
   m_ObjectHideFlags: 0
@@ -633,7 +633,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6339199359545046455}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -690,13 +690,13 @@ GameObject:
   - component: {fileID: 6339199359595361541}
   - component: {fileID: 6339199359595361540}
   - component: {fileID: 6339199359595361543}
-  m_Layer: 10
+  m_Layer: 14
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6339199359595361538
 Transform:
   m_ObjectHideFlags: 0
@@ -726,7 +726,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6339199359595361542}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -783,7 +783,7 @@ GameObject:
   - component: {fileID: 6339199359964735598}
   - component: {fileID: 6339199359964735601}
   - component: {fileID: 6339199359964735600}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -946,7 +946,7 @@ GameObject:
   - component: {fileID: 6339199360370855091}
   - component: {fileID: 6339199360370855090}
   - component: {fileID: 6339199360370855093}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1184,13 +1184,13 @@ GameObject:
   - component: {fileID: 6339199360842494923}
   - component: {fileID: 6339199360842494922}
   - component: {fileID: 6339199360842494925}
-  m_Layer: 10
+  m_Layer: 14
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6339199360842494920
 Transform:
   m_ObjectHideFlags: 0
@@ -1220,7 +1220,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6339199360842494924}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1277,13 +1277,13 @@ GameObject:
   - component: {fileID: 6339199361049752685}
   - component: {fileID: 6339199361049752684}
   - component: {fileID: 6339199361049752687}
-  m_Layer: 10
+  m_Layer: 14
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6339199361049752682
 Transform:
   m_ObjectHideFlags: 0
@@ -1313,7 +1313,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6339199361049752686}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1448,7 +1448,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: d17b3200477dc4c2aba443c09c3181d1,
         type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d17b3200477dc4c2aba443c09c3181d1, type: 3}
@@ -1554,7 +1554,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: d17b3200477dc4c2aba443c09c3181d1,
         type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d17b3200477dc4c2aba443c09c3181d1, type: 3}
@@ -1660,7 +1660,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: d17b3200477dc4c2aba443c09c3181d1,
         type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d17b3200477dc4c2aba443c09c3181d1, type: 3}
@@ -1766,7 +1766,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: a3145daed477e4da09aac85761fd1acf,
         type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3145daed477e4da09aac85761fd1acf, type: 3}

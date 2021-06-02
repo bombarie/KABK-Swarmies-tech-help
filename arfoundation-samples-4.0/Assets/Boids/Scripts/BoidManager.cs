@@ -37,6 +37,19 @@ public class BoidManager : MonoBehaviour {
         GameObject.Destroy(b.gameObject);
     }
 
+    public void setSettings(BoidSettings settings) {
+        this.settings = settings;
+        foreach (Boid b in _boids) {
+            b.setSettings(this.settings);
+        }
+    }
+    public void setTarget(Transform target) {
+        this.boidsTarget = target;
+        foreach (Boid b in _boids) {
+            b.setTarget(target);
+        }
+    }
+
     void Update() {
         if (_boids != null) {
 
@@ -55,8 +68,8 @@ public class BoidManager : MonoBehaviour {
 
             compute.SetBuffer(0, "boids", boidBuffer);
             compute.SetInt("numBoids", _boids.Count);
-            compute.SetFloat("viewRadius", settings.perceptionRadius);
-            compute.SetFloat("avoidRadius", settings.avoidanceRadius);
+            compute.SetFloat("viewRadius", settings.perceptionRadius * settings.scaleMultiplier);
+            compute.SetFloat("avoidRadius", settings.avoidanceRadius * settings.scaleMultiplier);
 
             int threadGroups = Mathf.CeilToInt(numBoids / (float)threadGroupSize);
             compute.Dispatch(0, threadGroups, 1, 1);

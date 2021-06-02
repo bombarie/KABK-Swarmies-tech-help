@@ -23,4 +23,7 @@ public class BoidSettings : ScriptableObject {
     public float avoidCollisionWeight = 10;
     public float collisionAvoidDst = 5;
 
+    [Header("Scale Multiplier")]
+    public float scaleMultiplier = 1f;
+
 }

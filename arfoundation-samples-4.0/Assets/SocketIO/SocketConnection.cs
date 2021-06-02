@@ -43,18 +43,18 @@ public class SocketConnection : MonoBehaviour {
                 int i = Random.Range(0, 3);
                 switch (i) {
                     case 0:
-                        if (BoidsAddRemover.instance != null) {
-                            BoidsAddRemover.instance.addBoidType(BoidsAddRemover.Type.TYPE_1);
+                        if (BoidManagerHelper.instance != null) {
+                            BoidManagerHelper.instance.addBoidType(BoidManagerHelper.Type.TYPE_1);
                         }
                         break;
                     case 1:
-                        if (BoidsAddRemover.instance != null) {
-                            BoidsAddRemover.instance.addBoidType(BoidsAddRemover.Type.TYPE_2);
+                        if (BoidManagerHelper.instance != null) {
+                            BoidManagerHelper.instance.addBoidType(BoidManagerHelper.Type.TYPE_2);
                         }
                         break;
                     case 2:
-                        if (BoidsAddRemover.instance != null) {
-                            BoidsAddRemover.instance.addBoidType(BoidsAddRemover.Type.TYPE_3);
+                        if (BoidManagerHelper.instance != null) {
+                            BoidManagerHelper.instance.addBoidType(BoidManagerHelper.Type.TYPE_3);
                         }
                         break;
                 }

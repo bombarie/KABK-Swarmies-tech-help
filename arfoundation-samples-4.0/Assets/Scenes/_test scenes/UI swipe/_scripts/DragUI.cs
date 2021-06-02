@@ -19,7 +19,8 @@ public class DragUI : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHa
 
 
     public Vector3 panelTargetPos;
-    public int panelW = 1080;
+    public int panelW = 1200;
+    public int panelH = 2000;
     public float snapSpeed = 15f;
     public float changePanelSwipeThreshold = 0.5f;
     public float nextPanelLoadedDistanceThreshold = 0.05f;
@@ -39,9 +40,12 @@ public class DragUI : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHa
 
         panelTargetPos = screensParent.position;
         panelW = Screen.width;
+        panelH = Screen.height;
+        Debug.Log("DragUI >> Start() >> panelW,panelH = " + panelW + "," + panelH);
 
         for (int i = 0; i < panels.Length; i++) {
-            panels[i].transform.localPosition = new Vector3(i * panelW, panels[i].transform.localPosition.y, panels[i].transform.localPosition.z);
+            //panels[i].transform.localPosition = new Vector3(i * panelW, panels[i].transform.localPosition.y, i * 5);
+            panels[i].transform.localPosition = new Vector3(i * panelW, 0f, i * 5);
         }
 
         IPanelBehavior ipb = panels[selectedPanel].GetComponent<IPanelBehavior>();

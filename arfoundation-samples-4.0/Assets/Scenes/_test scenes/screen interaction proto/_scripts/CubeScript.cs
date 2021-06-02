@@ -40,7 +40,8 @@ namespace swarmies.test {
                         r.material.color = Random.ColorHSV(0f, 1f, 1f, 1f, 1f, 1f);
                     }
                 }
-            }*/
+            }
+            */
 
             // src: https://docs.unity3d.com/ScriptReference/Input.GetTouch.html
             for (int i = 0; i < Input.touchCount; i++) {
