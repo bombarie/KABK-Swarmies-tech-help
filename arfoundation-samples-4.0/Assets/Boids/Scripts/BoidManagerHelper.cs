@@ -106,7 +106,7 @@ public class BoidManagerHelper : MonoBehaviour {
                         Debug.Log("I hit a hotspotcreate wall!");
 
                         //boidManager.settings = boidSettingsTight;
-                        Vector3 v = hit.point - (Random.Range(0.2f, .4f) * hit.normal);
+                        Vector3 v = hit.point - (Random.Range(0.12f, .22f) * hit.normal);
                         boidsTarget.position = v;
                         BoidManagerHelper.instance.boidManager.setTarget(boidsTarget);
                         BoidManagerHelper.instance.boidManager.setSettings(BoidManagerHelper.instance.boidSettingsTight);
@@ -172,7 +172,7 @@ public class BoidManagerHelper : MonoBehaviour {
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask)) {
                 Debug.Log("BoidManagerHelper >> settings 'boidSettingsLoose'");
                 //boidManager.setSettings(boidSettingsLoose);
-                Vector3 v = hit.point - (Random.Range(0.1f, 0.45f) * hit.normal);
+                Vector3 v = hit.point - (Random.Range(0.12f, 0.22f) * hit.normal);
 
                 //Boid b = spawner.spawnBoid(v);
                 //boidManager.InitializeBoid(b);
